@@ -1,0 +1,268 @@
+.customer-orders {
+  padding: 20px;
+}
+
+.orders-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.orders-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.order-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.status.pending {
+  background-color: #fff7ed;
+  color: #c2410c;
+}
+
+.status.processing {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.status.completed {
+  background-color: #f0f9ff;
+  color: #0369a1;
+}
+
+.status.delivered {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.order-items {
+  padding: 15px 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.item-price {
+  color: #64748b;
+}
+
+.item-quantity {
+  color: #64748b;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.total-amount {
+  font-weight: bold;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.order-date {
+  color: #64748b;
+}
+
+.loading, .error, .no-orders {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.no-orders {
+  color: #64748b;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feedback-button {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.feedback-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+
+.feedback-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.feedback-modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-modal h3 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+}
+
+.rating-group {
+  margin-bottom: 1.5rem;
+}
+
+.rating-input {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+}
+
+.rating-input label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #cbd5e0;
+}
+
+.rating-input input {
+  display: none;
+}
+
+.rating-input input:checked ~ label span {
+  color: #f6e05e;
+}
+
+.rating-input label:hover span,
+.rating-input label:hover ~ label span {
+  color: #f6e05e;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submit-btn,
+.cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+}
+
+.cancel-btn {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.submit-btn:hover,
+.cancel-btn:hover {
+  transform: translateY(-2px);
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payment-method {
+  color: #4b5563;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.payment-method::before {
+  content: '💳';
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 10px;
+  }
+
+  .order-card {
+    padding: 15px;
+  }
+
+  .order-header, .order-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .order-info {
+    width: 100%;
+  }
+}

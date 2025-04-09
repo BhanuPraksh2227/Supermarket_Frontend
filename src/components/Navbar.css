@@ -1,0 +1,120 @@
+.navbar {
+  background: #d016c7;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(7, 169, 228, 0.1);
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #77d230, #38b2ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-links a:not(.btn-logout) {
+  --color: #4299e1;
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  margin: 0;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:not(.btn-logout)::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:not(.btn-logout):hover {
+  color: white;
+}
+
+.navbar-links a:not(.btn-logout):hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+.btn-logout {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-logout:hover {
+  background: #c53030;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-links a:not(.btn-logout) {
+    width: 5em;
+    height: 2.3em;
+    line-height: 2.2em;
+    font-size: 15px;
+  }
+
+  .navbar-brand a {
+    font-size: 1.25rem;
+  }
+}
+
+/* Fix for mobile devices */
+@media (max-width: 640px) {
+  .navbar-links {
+    gap: 0.5rem;
+  }
+
+  .navbar-links a:not(.btn-logout) {
+    width: 4em;
+    font-size: 14px;
+  }
+}

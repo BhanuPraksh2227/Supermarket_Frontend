@@ -1,0 +1,28 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.manager-layout,
+.customer-layout {
+  flex: 1;
+  padding: 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+}
+
+/* Layout styles */
+.manager-layout {
+  background-color: #f8f9fa;
+}
+
+.customer-layout {
+  background-color: #fff;
+} 

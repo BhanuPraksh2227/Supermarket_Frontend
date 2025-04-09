@@ -1,0 +1,182 @@
+.customer-home {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, hsl(112, 85%, 67%) 0%, rgb(92, 246, 200) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 20px rgba(158, 241, 99, 0.1);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Different colors for different icons */
+.feature-card:nth-child(1) i {
+  color: #FF6B6B; /* Coral red for first icon */
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card:nth-child(2) i {
+  color: #4ECDC4; /* Turquoise for second icon */
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card:nth-child(3) i {
+  color: #FFD93D; /* Golden yellow for third icon */
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card:nth-child(4) i {
+  color: #6C5CE7; /* Purple for fourth icon */
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* You can also target specific icons by their classes if you prefer */
+.feature-card i.fa-shopping-cart {
+  color: #FF6B6B; /* Coral red for shopping cart */
+}
+
+.feature-card i.fa-history {
+  color: #4ECDC4; /* Turquoise for history/orders */
+}
+
+.feature-card i.fa-star {
+  color: #FFD93D; /* Golden yellow for ratings/feedback */
+}
+
+.feature-card i.fa-user {
+  color: #6C5CE7; /* Purple for user/profile */
+}
+
+.feature-card h3 {
+  color: hsl(302, 23%, 23%);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+/* Different colored buttons for each feature card */
+.feature-card:nth-child(1) .feature-link {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:nth-child(2) .feature-link {
+  background: linear-gradient(135deg, #4ECDC4 0%, #45B7AF 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:nth-child(4) .feature-link {
+  background: linear-gradient(135deg, #FFD93D 0%, #FFC107 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:nth-child(3) .feature-link {
+  background: linear-gradient(135deg, #6C5CE7 0%, #5B4CC4 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effects for each button */
+.feature-card:nth-child(1) .feature-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.feature-card:nth-child(2) .feature-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+}
+
+.feature-card:nth-child(3) .feature-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 217, 61, 0.3);
+}
+
+.feature-card:nth-child(4) .feature-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* Remove the old feature-link styles */
+.feature-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .customer-home {
+    padding: 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+}
